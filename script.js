@@ -29,13 +29,7 @@ noButton.addEventListener("click", function () {
 function handleYesClick() {
   titleElement.innerHTML = "Yayyy!! :3";
   buttonsContainer.classList.add("hidden");
-  showGif("yes");
-}
-
-function showGif(choice) {
-  if (choice === "yes") {
-    catImg.src = "img/cat-yes.gif";  // Đường dẫn đến GIF
-  }
+  changeImage("yes");
 }
 
 function resizeYesButton() {
@@ -43,7 +37,7 @@ function resizeYesButton() {
   const fontSize = parseFloat(computedStyle.getPropertyValue("font-size"));
   const newFontSize = fontSize * 1.6;
 
-  yesButton.style.fontSize = `${newFontSize}px`;  // Thêm dấu `` để tránh lỗi
+  yesButton.style.fontSize = ${newFontSize}px;
 }
 
 function generateMessage(noCount) {
@@ -61,11 +55,7 @@ function generateMessage(noCount) {
 }
 
 function changeImage(image) {
-  if (image === "yes") {
-    catImg.src = "img/cat-yes.gif";  // Khi chọn "Yes", hiển thị GIF
-  } else {
-    catImg.src = `img/cat-${image}.jpg`;  // Khi chọn "No", hiển thị ảnh tĩnh
-  }
+  catImg.src = img/cat-${image}.jpg;
 }
 
 function updateNoButtonText() {
