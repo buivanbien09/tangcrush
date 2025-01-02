@@ -32,6 +32,14 @@ function handleYesClick() {
   changeImage("yes");
 }
 
+function changeImage(choice) {
+  const imgElement = document.querySelector("#displayImage");
+  if (choice === "yes") {
+    imgElement.src = "//i.namu.wiki/i/Gsk4lOclWuoE5VjJGad9_uSaF6s70M2kfR9iKHcOVzmDF_wNCBnp2cxgD56aVjSqYaLrOg6y8KmtqMEg95H1DULxtmMZ7B5fmMYG5ooKQ-k.mp4";  // Đường dẫn đến tệp GIF
+  } else {
+    imgElement.src = "no.png";   // Ảnh khác nếu cần
+  }
+}
 function resizeYesButton() {
   const computedStyle = window.getComputedStyle(yesButton);
   const fontSize = parseFloat(computedStyle.getPropertyValue("font-size"));
