@@ -29,16 +29,17 @@ noButton.addEventListener("click", function () {
 function handleYesClick() {
   titleElement.innerHTML = "Yayyy!! :3";
   buttonsContainer.classList.add("hidden");
-  changeImage("yes");
+  showGif("yes");  // Hiển thị GIF
 }
 
-function changeImage(choice) {
-  const imgElement = document.querySelector("#displayImage");
+function showGif(choice) {
   if (choice === "yes") {
-    imgElement.src = "cat-yes.gif";  // Đường dẫn đến tệp GIF
-  } else {
-    imgElement.src = "no.png";   // Ảnh khác nếu cần
+    catImg.src = "img/cat-yes.gif";  // Đường dẫn đến tệp GIF
   }
+}
+
+function changeImage(image) {
+  catImg.src = `img/cat-${image}.jpg`;  // Giữ logic ảnh tĩnh khi nhấn "No"
 }
 
 function resizeYesButton() {
@@ -61,10 +62,6 @@ function generateMessage(noCount) {
 
   const messageIndex = Math.min(noCount, messages.length - 1);
   return messages[messageIndex];
-}
-
-function changeImage(image) {
-  catImg.src = `img/cat-${image}.jpg`;
 }
 
 function updateNoButtonText() {
