@@ -2,8 +2,8 @@
 
 const titleElement = document.querySelector(".title");
 const buttonsContainer = document.querySelector(".buttons");
-const yesButton = document.querySelector(".btn--yes");
-const noButton = document.querySelector(".btn--no");
+const yesButton = document.querySelector(".btn--có");
+const noButton = document.querySelector(".btn--hông");
 const catImg = document.querySelector(".cat-img");
 
 const MAX_IMAGES = 5;
